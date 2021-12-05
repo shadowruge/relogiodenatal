@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        #falta{
+        #falta {
             color: rgb(245, 8, 8);
             font-size: 60px;
             font-weight: bold;
@@ -13,7 +14,7 @@
             margin-top: 50px;
         }
 
-        p{
+        p {
             color: rgb(245, 8, 8);
             font-size: 60px;
             font-weight: bold;
@@ -21,35 +22,38 @@
             margin-top: 10px;
         }
 
-        img{
-            margin-left: 40%;
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto
         }
     </style>
     <title>Document</title>
-    
-    
+
+
 </head>
+
 <body>
     <div id="falta"></div>
     <p>Ajuda para estudos e laboratorio</p>
-    <img src="https://user-images.githubusercontent.com/20734038/143509108-dff83ac0-aa78-4219-98a5-b76a91b1cd98.png" alt="">
+    <img src="https://user-images.githubusercontent.com/20734038/143509108-dff83ac0-aa78-4219-98a5-b76a91b1cd98.png"
+        alt="">
     <p>Obrigado!</p>
- 
+
     <script>
+        const hoje = new Date()
+        const natal = new Date(hoje.getFullYear(), 11, 25)
+        const um_dia = 1000 * 60 * 60 * 24
 
-const hoje = new Date()
-const natal =new Date(hoje.getFullYear(), 11, 25)
-const um_dia = 1000 * 60 * 60 * 24
+        if (hoje.getMonth() == 11 && hoje.getDate() == 25)
+            natal.setFullYear(natal.getFullYear() + 1)
 
-if (hoje.getMonth() == 11 && hoje.getDate() == 25) 
-natal.setFullYear(natal.getFullYear() + 1)
-
-const dias = Math.ceil((natal.getTime() - hoje.getTime()) / (um_dia))
+        const dias = Math.ceil((natal.getTime() - hoje.getTime()) / (um_dia))
 
 
-const div = document.querySelector('#falta')
-div.innerHTML = `Faltam ${dias} dias para o Natal!`
-
+        const div = document.querySelector('#falta')
+        div.innerHTML = `Faltam ${dias} dias para o Natal!`
     </script>
 </body>
+
 </html>
