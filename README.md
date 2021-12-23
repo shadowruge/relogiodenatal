@@ -1,5 +1,5 @@
 #Oque fazer com ele<br>
--Relogio simples em js para coantar quantos dias faltam para o natal.<br>
+-Relogio simples em js para comntar quantos dias faltam para o natal.<br>
 #Creditos<br>
 -BY<br>
 codigo Fonte TV<br>
